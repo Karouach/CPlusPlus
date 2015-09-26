@@ -7,12 +7,12 @@
 
 using namespace std;
 
-void f (int a){
-    a++;
+void f (int *p){
+    ++(*p);
 }
 int main(int argc, char **argv) {
-    int a = 5;
-    f(a);
+    int a = 1;
+    f(&a);
     printf("a is %d \n", a);
     return 0;
 }
