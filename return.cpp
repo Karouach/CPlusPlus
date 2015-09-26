@@ -3,16 +3,16 @@
 //
 
 #include <cstdio>
+#include <string>
 
 using namespace std;
-int  func(int i){
-
-    puts("func()\n");
-    return i * 2;
+const string  & func(){
+    static string s = "This is a static string";
+    return s;
 }
 int main(int argc, char ** argv){
     puts("this is main ()");
-    printf("returned value is %d\n", func(42));
+    printf("returned value s is %s\n", func().c_str());
     return 0;
 }
 
