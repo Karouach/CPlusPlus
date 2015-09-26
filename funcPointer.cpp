@@ -6,13 +6,13 @@
 #include <string>
 
 using namespace std;
-const string  & func(){
+void func(){
     static string s = "This is a static string";
-    return s;
 }
 int main(int argc, char ** argv){
+    void (*fp)() = func;
     puts("this is main ()");
-    printf("returned value s is %s\n", func().c_str());
+    fp();
     return 0;
 }
 
