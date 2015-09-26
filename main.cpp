@@ -7,15 +7,13 @@
 
 using namespace std;
 
-unsigned long factorial (unsigned long n){
-    if(n < 2) return 1;
-    return factorial(n -1) * n;
+void f (int a){
+    a++;
 }
 int main(int argc, char **argv) {
-    for(int i = 0; i < argc; ++i){
-        puts(argv[i]);
-    }
-    factorial(1);
-    cout << factorial(1)<<endl;
+    int a = 5;
+    f(a);
+    printf("a is %d \n", a);
     return 0;
 }
+
