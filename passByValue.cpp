@@ -3,22 +3,17 @@
 //
 
 #include <cstdio>
+#include <string>
 
 using namespace std;
-void func(int i){
-    printf("Value of i is %d \n", i);
-}
-void fun2(int &i){
-    i = 73;
-    printf("value is %d\n", i);
+void func(const string * fs){
+    printf("Value of s is %s \n", fs->c_str());
 }
 int main(int argc, char ** argv){
-    int x = 43;
+    string s = "Hello, this is a string";
     puts("this is main ()");
-    func(42);
-    fun2(x);
-    x= 73;
-    printf("x is %d\n", x);
+    func(&s);
+    printf("String is %s\n", s.c_str());
     return 0;
 }
 
