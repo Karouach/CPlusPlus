@@ -5,16 +5,14 @@
 #include <cstdio>
 
 using namespace std;
-void func(){
-    static int i = 5;
-    printf("Value of s is %d \n", ++i);
-    i= 40;
-    printf("Value of s is %d \n", ++i);
+int  func(int i){
+
+    puts("func()\n");
+    return i * 2;
 }
 int main(int argc, char ** argv){
     puts("this is main ()");
-    func();
-    func();
+    printf("returned value is %d\n", func(42));
     return 0;
 }
 
